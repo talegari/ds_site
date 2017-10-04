@@ -1,0 +1,21 @@
+---
+title: "First test post"
+author: "Srikanth KS"
+date: "2017-10-04"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Simple rpart model on iris
+
+```{R}
+library("rpart")
+library("rpart.plot")
+
+tree_model = rpart(Species ~., data = iris)
+summary(tree_model)
+prp(tree_model)
+```
